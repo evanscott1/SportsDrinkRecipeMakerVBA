@@ -1,0 +1,11 @@
+# Excel temporary files
+~$*.xlsm
+~$*.xlsb
+~$*.xls
+
+# Windows thumbnail cache
+Thumbs.db
+
+# Rubberduck logs/cache (if applicable - adjust pattern if needed)
+*.log
+.rubberduck/
