@@ -1,0 +1,20 @@
+﻿    ' --- In the ThisWorkbook Module ---
+    Option Explicit
+
+    Private Sub Workbook_Open()
+        On Error GoTo ErrorHandler
+        
+        Debug.Print "Workbook_Open event started."
+        
+        ' Initialize the nutrient data repository
+        ' Assumes modNutrientRepository and InitializeNutrientRepository exist
+        ModNutrientRepository.InitializeNutrientRepository
+        
+        Debug.Print "Nutrient Repository Initialized via Workbook_Open."
+        
+        Exit Sub
+        
+ErrorHandler:
+        MsgBox "An error occurred during workbook initialization:" & vbCrLf & _
+               Err.Number & " - " & Err.Description, vbCritical, "Initialization Error"
+    End Sub
